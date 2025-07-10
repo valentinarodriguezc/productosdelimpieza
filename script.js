@@ -57,7 +57,7 @@ const productos = [
   
    {
     nombre: "Hipoclorito SAPOLIO 2L",
-    descripcion: "Limpia y desinfecta".",
+    descripcion: "Limpia y desinfecta.",
     precio: "$95",
     imagen: "foto.jpg"
   },
