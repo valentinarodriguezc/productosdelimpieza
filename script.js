@@ -74,10 +74,10 @@ const productos = [
     imagen: "foto13.jpg"
   },
    {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+    nombre: "Aromatizante de ambientes SAPOLIO Lavanda",
+    descripcion: "Aromatizante en aerosol",
+    precio: "$95",
+    imagen: "sapoliolavanda.png"
   },
    {
     nombre: "Limpiavidrios Griselda con",
