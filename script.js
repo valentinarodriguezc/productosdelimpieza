@@ -59,19 +59,25 @@ const productos = [
     nombre: "Hipoclorito SAPOLIO 2L",
     descripcion: "Limpia y desinfecta.",
     precio: "$95",
-    imagen: "foto.jpg"
+    imagen: "foto14.jpeg"
   },
    {
     nombre: "Hipoclorito GOROX 2L",
     descripcion: "Deja tus pisos desinfectados.",
     precio: "$85",
-    imagen: "foto.jpg"
+    imagen: "gorox.jpeg"
   },
    {
     nombre: "Quitamanchas liquído Aqua fast 1L",
     descripcion: "Elimina las manchas de tus prendas dde forma fácil",
     precio: "$100",
-    imagen: "foto13.jpg"
+    imagen: "aquafastquitamanchas.png"
+  },
+  {
+    nombre: "Aromatizante de ambientes GLADE Lavanda",
+    descripcion: "Aromatizante en aerosol",
+    precio: "$130",
+    imagen: "lavandaglade.webp"
   },
    {
     nombre: "Aromatizante de ambientes SAPOLIO Lavanda",
@@ -80,67 +86,30 @@ const productos = [
     imagen: "sapoliolavanda.png"
   },
    {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+    nombre: "Aromatizante de ambientes SAPOLIO Antitabaco",
+    descripcion: "Aromatizante en aerosol",
+    precio: "$95",
+    imagen: "antitabacosapolio.png"
   },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+  {
+    nombre: "Aromatizante de ambientes SAPOLIO Potpurri de Flores",
+    descripcion: "Aromatizante en aerosol",
+    precio: "$95",
+    imagen: "potpurrifloressapolio.jpg"
   },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+  {
+    nombre: "Aromatizante de ambientes SAPOLIO Arullos de Bebé",
+    descripcion: "Aromatizante en aerosol",
+    precio: "$95",
+    imagen: "arullosdebebesapolio.jpg"
   },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+  {
+    nombre: "Aromatizante de ambientes JUPITER Limón",
+    descripcion: "Aromatizante en aerosol",
+    precio: "$90",
+    imagen: "limonjupiter.webp"
   },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
-  },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
-  },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
-  },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
-  },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
-  },
-   {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
-  },
-
-];
+   ];
 
 const contenedor = document.getElementById("product-list");
 
@@ -154,4 +123,48 @@ productos.forEach((prod) => {
     <strong>${prod.precio}</strong>
   `;
   contenedor.appendChild(div);
+});
+
+/*buscador de productos1REEVER*/
+
+document.getElementById("buscador").addEventListener("input", function () {
+  const valor = this.value.toLowerCase();
+  const productosFiltrados = productos.filter(p =>
+    p.nombre.toLowerCase().includes(valor) ||
+    p.descripcion.toLowerCase().includes(valor)
+  );
+  renderizarProductos(productosFiltrados);
+});
+
+/*Para buscador opcion2*/
+function renderizarProductos(lista) {
+  const contenedor = document.getElementById("product-list");
+  contenedor.innerHTML = ""; // Limpiar antes de renderizar
+
+  lista.forEach((prod) => {
+    const div = document.createElement("div");
+    div.className = "product";
+    div.innerHTML = `
+      <img src="${prod.imagen}" alt="${prod.nombre}">
+      <h3>${prod.nombre}</h3>
+      <p>${prod.descripcion}</p>
+      <strong>${prod.precio}</strong>
+    `;
+    contenedor.appendChild(div);
+  });
+}
+
+// Renderiza todo al cargar
+renderizarProductos(productos);
+
+// Agrega el filtrado en tiempo real
+document.getElementById("buscador").addEventListener("input", function () {
+  const valor = this.value.toLowerCase();
+
+  const filtrados = productos.filter(prod =>
+    prod.nombre.toLowerCase().includes(valor) ||
+    prod.descripcion.toLowerCase().includes(valor)
+  );
+
+  renderizarProductos(filtrados);
 });

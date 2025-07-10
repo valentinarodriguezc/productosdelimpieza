@@ -4,7 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>PRODUCTOS DE LIMPIEZA - CIUDAD DE LA COSTA</title>
-  <input type="text" id="buscador" placeholder="Que estas buscando?" />
 
   <link rel="stylesheet" href="styles.css" />
 </head>
@@ -22,11 +21,15 @@
 
   <main>
     <section id="productos">
-      <h2>Nuestros Productos</h2>
-      <div class="product-list" id="product-list">
-        <!-- Productos se insertan con JS -->
-      </div>
-    </section>
+      <div class="buscador-container">
+    <input type="text" id="buscador" placeholder="            🔍Que estas buscando?🔍" />
+  </div>
+  <h2>Nuestros Productos</h2>
+
+  <div class="product-list" id="product-list">
+    <!-- Productos se insertan con JS -->
+  </div>
+</section>
 
     <section id="formas-pago">
       <h2>Formas de Pago</h2>
@@ -48,7 +51,9 @@
   <footer>
     <p>&copy; 🫧🧴Productos de Limpieza Solymar 🧴🫧 2025. Todos los derechos reservados.</p>
   </footer>
-
+<a href="https://wa.me/59891904390" class="whatsapp" target="_blank" aria-label="Chatear por WhatsApp">
+  💬
+</a>
   <script src="script.js"></script>
 </body>
 </html>

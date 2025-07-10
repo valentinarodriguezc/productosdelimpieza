@@ -136,3 +136,42 @@ h1, h2 {
   font-size: 1rem;
   color: #cc00a0;
 }
+/*PARA EL BUSCADOR*/
+.buscador-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#buscador {
+  width: 90%;
+  max-width: 400px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 2px solid #cc00ad;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#buscador:focus {
+  border-color: #25d366;
+}
+/*boton flotante wpp*/
+.whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  color: white;
+  font-size: 28px;
+  padding: 12px 16px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp:hover {
+  transform: scale(1.1);
+}
