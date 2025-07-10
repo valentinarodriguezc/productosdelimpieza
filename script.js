@@ -51,27 +51,27 @@ const productos = [
   {
     nombre: "Limpiavidrios Griselda con",
     descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
+    precio: "$90",
     imagen: "foto10.jpg"
   },
   
    {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+    nombre: "Hipoclorito SAPOLIO 2L",
+    descripcion: "Limpia y desinfecta".",
+    precio: "$95",
+    imagen: "foto.jpg"
   },
    {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+    nombre: "Hipoclorito GOROX 2L",
+    descripcion: "Deja tus pisos desinfectados.",
+    precio: "$85",
+    imagen: "foto.jpg"
   },
    {
-    nombre: "Limpiavidrios Griselda con",
-    descripcion: "Deja tus vidrios brillantes y sin marcas.",
-    precio: "$150",
-    imagen: "foto3.jpg"
+    nombre: "Quitamanchas liquído Aqua fast 1L",
+    descripcion: "Elimina las manchas de tus prendas dde forma fácil",
+    precio: "$100",
+    imagen: "foto13.jpg"
   },
    {
     nombre: "Limpiavidrios Griselda con",
